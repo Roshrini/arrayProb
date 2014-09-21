@@ -34,15 +34,16 @@ public class ArrayProb {
     }
     
     public boolean MatchString(String match){
+        //int temp=0;
+         char ar[]=match.toCharArray();
         for(int i=0;i<match.length()-1;i++)
         {
-            char ar[]=match.toCharArray();
-            if(ar[i]==ar[i+1])
-            {
+           for (int j = i+1; j < match.length(); j++)
+        {
+            if (ar[i] == ar[j]) 
              return false;   
-            }
+        }
         }
          return true;
     }
-    
 }
