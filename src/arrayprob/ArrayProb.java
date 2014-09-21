@@ -26,14 +26,19 @@ public class ArrayProb {
         String input;   
         System.out.println("Enter string to match: ");
         input = br.readLine();
-        boolean value = ex.MatchString(input);
+        boolean value = ex.matchString(input);
+        if(!input.isEmpty())
+        {      
         if(!value)
             System.out.println("It does not have unique values");
         else
             System.out.println("It has unique values");  
+        }
+        else
+           System.out.println("Please enter some string");  
     }
     
-    public boolean MatchString(String match){
+    public boolean matchString(String match){
         //int temp=0;
          char ar[]=match.toCharArray();
         for(int i=0;i<match.length()-1;i++)
